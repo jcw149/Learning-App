@@ -8,7 +8,7 @@ interface Props {
   onStart: (mode: Mode, category: Category | "All") => void;
 }
 
-const categories: (Category | "All")[] = ["All", "Investment Banking", "Accounting"];
+const categories: (Category | "All")[] = ["All", "Investment Banking", "Accounting", "Balance Sheet Forecasting"];
 const modes: { value: Mode; label: string; description: string; icon: string }[] = [
   {
     value: "multiple-choice",
@@ -40,7 +40,7 @@ export default function HomeScreen({ onStart }: Props) {
         {/* Category selection */}
         <div className="mb-8">
           <h2 className="text-slate-300 font-semibold text-sm uppercase tracking-widest mb-3">Category</h2>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -89,7 +89,7 @@ export default function HomeScreen({ onStart }: Props) {
 
         {/* Stats hint */}
         <p className="text-center text-slate-500 text-sm mt-5">
-          24 questions · Investment Banking & Accounting · Easy to Hard
+          44 questions · Investment Banking, Accounting & Balance Sheet Forecasting · Easy to Hard
         </p>
       </div>
     </div>
